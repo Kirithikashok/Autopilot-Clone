@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Tesla Autopilot Clone</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Tesla Autopilot Clone</h1>
+
+    <p class="subtitle">
+        Object Detection using YOLOv8 and BDD100K Dataset
+    </p>
+
+    <div class="cards">
+
+        <!-- IMAGE CARD -->
+
+        <div class="card">
+
+            <h2>Image Detection</h2>
+
+            <form
+                action="/upload_image"
+                method="POST"
+                enctype="multipart/form-data">
+
+                <input
+                    type="file"
+                    name="image"
+                    accept="image/*"
+                    required>
+
+                <br><br>
+
+                <button type="submit">
+                    Detect Image
+                </button>
+
+            </form>
+
+        </div>
+
+
+
+        <!-- VIDEO CARD -->
+
+        <div class="card">
+
+            <h2>Video Detection</h2>
+
+            <form
+                action="/upload_video"
+                method="POST"
+                enctype="multipart/form-data">
+
+                <input
+                    type="file"
+                    name="video"
+                    accept="video/*"
+                    required>
+
+                <br><br>
+
+                <button type="submit">
+                    Detect Video
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

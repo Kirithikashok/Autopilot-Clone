@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Image Detection Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Detection Result</h1>
+
+    <div class="result-box">
+
+        <div>
+
+            <h2>Original Image</h2>
+
+            <img src="{{ url_for('static', filename=original) }}" width="500">
+
+        </div>
+
+        <div>
+
+            <h2>Detected Image</h2>
+
+            <img src="{{ url_for('static', filename=detected) }}" width="500">
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <a href="/">⬅ Back</a>
+
+</div>
+
+</body>
+
+</html>
